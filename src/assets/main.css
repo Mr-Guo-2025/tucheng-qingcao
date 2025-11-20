@@ -1,0 +1,99 @@
+/* Hipster/Artistic Theme (文青風格) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500&display=swap');
+
+:root {
+    /* Palette: Muted, Earthy, Elegant */
+    --primary-color: #5F7161; /* Sage Green - Muted Nature */
+    --secondary-color: #8D8D8D; /* Neutral Grey */
+    --accent-color: #D0C9C0; /* Warm Beige */
+    --background-color: #FDFBF7; /* Off-white / Paper */
+    --text-color: #4A4A4A; /* Soft Black */
+    --light-text: #FFFFFF;
+    --card-bg: #FFFFFF;
+    --navbar-bg: #FFFFFF; /* Clean White Navbar */
+    --footer-bg: #EFEFEF; /* Light Grey Footer */
+    
+    --border-radius: 4px; /* Sharper corners for minimalist look */
+    --box-shadow: 0 2px 10px rgba(0,0,0,0.03); /* Very subtle shadow */
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif; /* Clean sans-serif for body */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.8; /* More breathing room */
+    letter-spacing: 0.05em; /* Slightly wider spacing */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Serif TC', serif; /* Serif for headings */
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.btn {
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #4A5A4B;
+    border-color: #4A5A4B;
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.card {
+    border: 1px solid rgba(0,0,0,0.05); /* Subtle border */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    background-color: var(--card-bg);
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+::-webkit-scrollbar-thumb {
+    background: #D0C9C0;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #B0A9A0;
+}
