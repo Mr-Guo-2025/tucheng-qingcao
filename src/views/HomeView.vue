@@ -6,15 +6,19 @@ const communitySection = ref(null)
 const currentPhotoIndex = ref(0)
 const isPhotoVisible = ref(true)
 
-// 獲取基礎路徑（用於 GitHub Pages 部署）
-const BASE_URL = import.meta.env.BASE_URL
+// 導入圖片
+import photo1 from '@/assets/images/community/photo1.jpg'
+import photo2 from '@/assets/images/community/photo2.jpg'
+import photo3 from '@/assets/images/community/photo3.jpg'
+import photo4 from '@/assets/images/community/photo4.jpg'
+import aboutImage from '@/assets/images/community/about.jpg'
 
-// 社區照片列表（請將您的照片放在 public/images/community/ 資料夾中）
+// 社區照片列表
 const communityPhotos = computed(() => [
-  `${BASE_URL}images/community/photo1.jpg`,
-  `${BASE_URL}images/community/photo2.jpg`,
-  `${BASE_URL}images/community/photo3.jpg`,
-  `${BASE_URL}images/community/photo4.jpg`
+  photo1,
+  photo2,
+  photo3,
+  photo4
 ])
 
 // 輔助函數：獲取背景圖片樣式
@@ -126,7 +130,7 @@ onUnmounted(() => {
         <div class="col-md-6 order-md-2 mb-4 mb-md-0">
           <div class="ps-md-5">
             <div class="image-wrapper-home position-relative">
-              <img :src="`${BASE_URL}images/community/about.jpg`" alt="社區簡介" class="img-fluid rounded-3 shadow-sm">
+              <img :src="aboutImage" alt="社區簡介" class="img-fluid rounded-3 shadow-sm">
               <div class="decorative-bg"></div>
             </div>
           </div>

@@ -1,19 +1,24 @@
 <script setup>
 import { ref } from 'vue'
 
-// 獲取基礎路徑（用於 GitHub Pages 部署）
-const BASE_URL = import.meta.env.BASE_URL
+// 導入圖片
+import moonFestivalImg from '@/assets/images/events/moon-festival.jpg'
+import walkingImg from '@/assets/images/events/walking.jpg'
+import newYearImg from '@/assets/images/events/new-year.jpg'
+import mothersDayImg from '@/assets/images/albums/mothers-day.jpg'
+import cleaningImg from '@/assets/images/albums/cleaning.jpg'
+import healthImg from '@/assets/images/albums/health.jpg'
 
 const events = ref([
-  { id: 1, title: '中秋節聯歡晚會', date: '2025-09-17', location: '社區活動中心', image: `${BASE_URL}images/events/moon-festival.jpg` },
-  { id: 2, title: '社區健走活動', date: '2025-10-10', location: '社區公園', image: `${BASE_URL}images/events/walking.jpg` },
-  { id: 3, title: '春節寫春聯', date: '2026-01-20', location: '里辦公處', image: `${BASE_URL}images/events/new-year.jpg` },
+  { id: 1, title: '中秋節聯歡晚會', date: '2025-09-17', location: '社區活動中心', image: moonFestivalImg },
+  { id: 2, title: '社區健走活動', date: '2025-10-10', location: '社區公園', image: walkingImg },
+  { id: 3, title: '春節寫春聯', date: '2026-01-20', location: '里辦公處', image: newYearImg },
 ])
 
 const albums = ref([
-  { id: 1, title: '114年母親節活動', count: 25, cover: `${BASE_URL}images/albums/mothers-day.jpg` },
-  { id: 2, title: '社區環境清潔日', count: 18, cover: `${BASE_URL}images/albums/cleaning.jpg` },
-  { id: 3, title: '長者健康講座', count: 30, cover: `${BASE_URL}images/albums/health.jpg` },
+  { id: 1, title: '114年母親節活動', count: 25, cover: mothersDayImg },
+  { id: 2, title: '社區環境清潔日', count: 18, cover: cleaningImg },
+  { id: 3, title: '長者健康講座', count: 30, cover: healthImg },
 ])
 </script>
 
